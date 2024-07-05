@@ -33,16 +33,19 @@ Iterative Calculation: PageRank employs an iterative process. Initially, all pag
 
 Relevance and Authority: Websites with high PageRank scores are generally considered more relevant and authoritative in their respective domains. 
 
-#PySpark Implentation
+PySpark Implentation
+
 To conduct the implementation the environment has to be set up.
 
 Set up Bucket
 
 Store files in Bucket
+
 <img width="361" alt="image" src="https://github.com/ssewit/Cloud-Computing/assets/105317921/9b51e41a-106a-4b31-88cf-b6ccbb6abda4">
 
 
 Set up Cluster
+
 <img width="748" alt="image" src="https://github.com/ssewit/Cloud-Computing/assets/105317921/0844a1ad-f9db-4875-8588-fdbd0acdfdca">
 
 Run the Job
@@ -53,7 +56,7 @@ Result
 
 <img width="284" alt="image" src="https://github.com/ssewit/Cloud-Computing/assets/105317921/49337a09-ef5a-42fd-874e-d376752ffebd">
 
-#Scala Implementation
+Scala Implementation
 
 To conduct the implementation the environment has to be set up.
 
