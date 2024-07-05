@@ -74,11 +74,20 @@ Setup PageRank Directory
 $mkdir d
 $mkdir pagerank
 $cd pagerank/
-$vi build.sbt<img width="440" alt="image" src="https://github.com/ssewit/Cloud-Computing/assets/105317921/6e5f20b3-581e-44cf-b9be-451f3e129e1c">
+$vi build.sbt
+```
+
+
+<img width="440" alt="image" src="https://github.com/ssewit/Cloud-Computing/assets/105317921/6e5f20b3-581e-44cf-b9be-451f3e129e1c">
+
+```
+
 $vi src/main/scala/SparkPageRank.scala
 ```
+
 <img width="359" alt="image" src="https://github.com/ssewit/Cloud-Computing/assets/105317921/d4048e55-4e68-410b-bf0a-c196bfa71d56">
 <img width="353" alt="image" src="https://github.com/ssewit/Cloud-Computing/assets/105317921/d9d83b2d-536a-439e-ab00-abf0591005a5">
+
 ```
 $sbt package
 ```
