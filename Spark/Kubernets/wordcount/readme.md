@@ -1,4 +1,4 @@
-# Word Count with Kibernets and Spark
+# Word Count and PageRank with Kibernets and Spark
 Apache Spark: This high-performance analytics engine tackles large datasets with ease and offers advanced analytical capabilities.
 
 Kubernetes: This open-source platform automates container deployment, scaling, and management.
