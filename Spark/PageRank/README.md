@@ -47,9 +47,10 @@ Set up Cluster
 
 Run the Job
 
-<img width="251" alt="image" src="https://github.com/ssewit/Cloud-Computing/assets/105317921/2bb50652-269d-41e6-a3bc-d42d103076a3">
+<img width="656" alt="image" src="https://github.com/ssewit/Cloud-Computing/assets/105317921/387962c6-8c8e-4407-9801-d995a33774cc">
 
 Result
+
 <img width="284" alt="image" src="https://github.com/ssewit/Cloud-Computing/assets/105317921/49337a09-ef5a-42fd-874e-d376752ffebd">
 
 #Scala Implementation
@@ -61,6 +62,7 @@ Set up Bucket
 Store input file in Bucket
 
 Set up Cluster
+
 <img width="395" alt="image" src="https://github.com/ssewit/Cloud-Computing/assets/105317921/d2e9a833-6ce0-4763-80a9-01f6a6147a6e">
 
 Install Scala
@@ -92,9 +94,11 @@ $vi src/main/scala/SparkPageRank.scala
 $sbt package
 ```
 Run the Job
+
 <img width="665" alt="image" src="https://github.com/ssewit/Cloud-Computing/assets/105317921/53e89748-d5ee-4c54-9f69-5da00fe45a43">
 
 Result
+
 <img width="284" alt="image" src="https://github.com/ssewit/Cloud-Computing/assets/105317921/65d55666-516f-4a67-8f35-c326cbe344e9">
 
 
