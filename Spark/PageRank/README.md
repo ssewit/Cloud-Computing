@@ -105,4 +105,6 @@ Result
 <img width="284" alt="image" src="https://github.com/ssewit/Cloud-Computing/assets/105317921/65d55666-516f-4a67-8f35-c326cbe344e9">
 
 
+https://docs.google.com/presentation/d/1nh5HNZrwhh921GGhA62q4i-p781CI4W9MxqAH3X5Hd4/edit?usp=sharing
+
 
