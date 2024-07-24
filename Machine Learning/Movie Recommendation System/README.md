@@ -141,7 +141,8 @@ gs://mv_recommendation_sys/recommendation_example.py \
 ### Result
 We can view the result of the job as we run the job and view the mean square error to evaluate how good the predictions are. You will see something like this.
 
-<img width="520" alt="image" src="https://github.com/user-attachments/assets/db6adb0b-04a9-4bba-8ffa-b8b2ac0c5f96">
+<img width="682" alt="image" src="https://github.com/user-attachments/assets/3fecd40c-8772-4a4e-a1d4-496936d094f9">
+
 
 
 
@@ -177,17 +178,62 @@ Data Preparation: Preprocess the data using PySpark's DataFrame API, handling mi
 
 ALS Implementation: Utilize PySpark's ALS class to implement the collaborative filtering algorithm, specifying parameters such as ranking, regularization, and iterations.
 
-Model Training: Train the ALS model using the fit() method, passing in the prepared ratings data.
+Create GCP Bucket and take not of the location setting.
 
-Model Evaluation: Evaluate the trained model using PySpark's RegressionEvaluator class, calculating metrics such as MAE or RMSE.
+Upload to GCP Bucket: You can upload manually or through the terminal.
 
-Code Modification: Modify the provided PySpark code (ipynb) to experiment with different parameters, algorithms, or techniques.
+<img width="607" alt="image" src="https://github.com/user-attachments/assets/9479e8bc-e420-4876-9412-cda69396090a">
 
-Code Conversion: Save the modified code in py format using PySpark's spark-submit command, and in HTML format using tools like Jupyter's nbconvert command.
+```
+gsutil cp movies.csv gs:// movie_recommendation_mllib/
+gsutil cp ratings.csv gs:// movie_recommendation_mllib/
+gsutil cp Recommendation_Engine_MovieLens.py gs:// movie_recommendation_mllib
+
+```
+
+Set up Pyspark files in to read from the Google Cloud Storage. You can manually upload the file or run this code. 
+
+```
+gsutil cp Recommendation_Engine_MovieLens.py gs://movie_recommendation_mllib
+```
+
+Create a cluster with the same setting: You can manually create a cluster or run this code
+
+```
+gcloud dataproc clusters create cluster-9c40 \
+ --region us-east1 \
+ --zone us-east1-1 \
+ --master-machine-type n1-standard-4 \
+ --worker-machine-type n1-standard-4 \
+ --num-workers 2
+
+```
+
+Submit the job on with the GCP path: Make sure to change the bucket name, cluster name and the rest of the setting to yours before implementing. 
+
+```
+gcloud dataproc jobs submit pyspark gs://movie_recommendation_mllib/Recommendation_Engine_MovieLens.py \
+ --cluster=cluster-9c40 \
+ --region=us-east1 \
+ -- \
+ --input_path_movies=gs://
+movie_recommendation_mllib/movies.csv \
+ --input_path_ratings=gs://
+movie_recommendation_mllib/ratings.csv
+
+```
 
 ### Result Preview
 
-When we run the python Recommendation_Engine_MovieLens.pynb and Recommendation_Engine_MovieLens_checkpoint.pynb files attached to this project the result is shown there to help us see the mean absolute error (MAE) and root mean squared error (RMSE) to evaluate the accuracy of the predictions. 
+When we run the python Recommendation_Engine_MovieLens.pynb and Recommendation_Engine_MovieLens_checkpoint.pynb files attached to this project the result is shown there to help us see the mean absolute error (MAE) and root mean squared error (RMSE) to evaluate the accuracy of the predictions. When you run the job you will see something like this. The results match with the code we run in the ipnb file. 
+
+<img width="664" alt="image" src="https://github.com/user-attachments/assets/139f1687-26ff-48a9-b9d7-22c571e3ac26">
+
+
+<img width="717" alt="image" src="https://github.com/user-attachments/assets/6929b00d-47ed-40e6-a8ee-fce63eb5d373">
+
+
+<img width="674" alt="image" src="https://github.com/user-attachments/assets/454893e2-5fbd-4816-a4b6-10cf1f1de86e">
 
 
 
