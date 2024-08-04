@@ -37,6 +37,8 @@ Cluster Environment Setup
 
 Open Databricks and subscribe for free trial. Connect it with the given py notebook from databrick site.
 
+<img width="712" alt="image" src="https://github.com/user-attachments/assets/5daeb7aa-539b-4cd5-b681-a03749c80a0e">
+
 
 
 
